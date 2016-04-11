@@ -18,20 +18,20 @@ Execution time: 0.002313 <br />
 <br />
 ---------------------------------------------------------- <br />
 SQL: Query user created within a time interval. <br />
-Results: 0 <br />
-Execution time: 0.001478 <br />
+Results: 1000 <br />
+Execution time: 0.017459 <br />
 <br />
 ---------------------------------------------------------- <br />
 Redis: Query user created within a time interval. <br />
-Results: 0 <br />
-Execution time: 0.000371 <br />
+Results: 1000 <br />
+Execution time: 0.008786 <br />
 <br />
 ---------------------------------------------------------- <br />
 SQL: Query comments by user name. <br />
 Results: 8 <br />
-Execution time: 0.003529 <br />
+Execution time: 0.005967 <br />
 <br />
 ---------------------------------------------------------- <br />
 Redis: Query comments by user name. <br />
 Results: 8 <br />
-Execution time: 0.003248 <br />
+Execution time: 0.004468 <br />

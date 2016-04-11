@@ -27,7 +27,7 @@ CUR_DIR = os.path.dirname(__file__)
 TEST_DB_PATH = os.path.join(os.path.realpath(CUR_DIR), 'test.db')
 SQL_DB_URL = 'sqlite:///' + TEST_DB_PATH
 REDIS_URL = 'redis://127.0.0.1:6379/0'
-NUM_USERS = 5000
+NUM_USERS = 1000
 RANGE_COMMENTS = (2, 10)
 
 
@@ -78,7 +78,7 @@ def main():
     start_time = time.time()
     rs_user = db.operations.sql_ops.get_users_by_time_range(
                  sql_session,
-                 datetime.datetime.now() - datetime.timedelta(seconds=10),
+                 datetime.datetime.now() - datetime.timedelta(seconds=30),
                  datetime.datetime.now())
     print 'Results: %d' % len(rs_user)
     print 'Execution time: %f' % (time.time() - start_time)
@@ -87,7 +87,7 @@ def main():
     print 'Redis: Query user created within a time interval.'
     start_time = time.time()
     rs_user = db.operations.redis_ops.get_users_by_time_range(
-                 datetime.datetime.now() - datetime.timedelta(seconds=10),
+                 datetime.datetime.now() - datetime.timedelta(seconds=30),
                  datetime.datetime.now())
     print 'Results: %d' % len(rs_user)
     print 'Execution time: %f' % (time.time() - start_time)
